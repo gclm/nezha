@@ -1,0 +1,339 @@
+# Instincts generated from https://github.com/gclm/nezha
+# Generated: 2026-06-03T17:19:11.983Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: nezha-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/nezha
+---
+
+# Nezha Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: fix, feat
+
+## Evidence
+
+- 3 commits analyzed
+- Detected conventional commit pattern
+- Examples: fix(theme): revert brand mark to blue in eyecare theme, feat(markdown): add table of contents for markdown preview and update… (#218)
+
+---
+id: nezha-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/nezha
+---
+
+# Nezha Commit Length
+
+## Action
+
+Write moderate-length commit messages (~62 characters)
+
+## Evidence
+
+- Average commit message length: 62 chars
+- Based on 3 commits
+
+---
+id: nezha-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/nezha
+---
+
+# Nezha Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: nezha-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/nezha
+---
+
+# Nezha Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: nezha-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/nezha
+---
+
+# Nezha Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: nezha-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/gclm/nezha
+---
+
+# Nezha Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: components, styles
+
+---
+id: nezha-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/gclm/nezha
+---
+
+# Nezha Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: nezha-instinct-file-naming
+trigger: "When creating a new file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/nezha
+---
+
+# Nezha Instinct File Naming
+
+## Action
+
+Name the file using PascalCase (e.g., MyComponent.tsx)
+
+## Evidence
+
+- Pattern in namingConventions.files: PascalCase
+
+---
+id: nezha-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/nezha
+---
+
+# Nezha Instinct Function Naming
+
+## Action
+
+Name the function using camelCase (e.g., fetchData)
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: nezha-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/nezha
+---
+
+# Nezha Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase (e.g., UserProfile)
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: nezha-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/nezha
+---
+
+# Nezha Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE (e.g., MAX_LENGTH)
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: nezha-instinct-import-style
+trigger: "When importing modules within the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/nezha
+---
+
+# Nezha Instinct Import Style
+
+## Action
+
+Use relative import paths (e.g., import X from '../X')
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: nezha-instinct-export-style
+trigger: "When exporting functions, classes, or constants"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/nezha
+---
+
+# Nezha Instinct Export Style
+
+## Action
+
+Use named exports (e.g., export { MyComponent })
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: nezha-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: gclm/nezha
+---
+
+# Nezha Instinct Commit Format
+
+## Action
+
+Format the message as <type>(<scope>): <description> (e.g., feat(markdown): add table of contents...)
+
+## Evidence
+
+- Seen in commit: fix(theme): revert brand mark to blue in eyecare theme
+- Seen in commit: feat(markdown): add table of contents for markdown preview and update… (#218)
+- Pattern in commits.prefixes: ["fix", "feat"]
+
+---
+id: nezha-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: gclm/nezha
+---
+
+# Nezha Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 62 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength: 62
+
+---
+id: nezha-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: gclm/nezha
+---
+
+# Nezha Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from the main source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: separate
+
+---
+id: nezha-instinct-try-catch-errors
+trigger: "When handling errors in code"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/nezha
+---
+
+# Nezha Instinct Try Catch Errors
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Pattern in errorHandling.style: try-catch
+
